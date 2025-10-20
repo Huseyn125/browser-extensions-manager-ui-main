@@ -2,7 +2,6 @@ const filterButtons = document.querySelectorAll('.navigation div button');
 const extensionCards = document.querySelectorAll('.extension-card');
 const toggleSwitches = document.querySelectorAll('.switch input');
 
-// Функция фильтрации
 function filterExtensions() {
     const activeFilter = document.querySelector('.navigation div button.active').textContent.toLowerCase();
     
@@ -21,7 +20,6 @@ function filterExtensions() {
     });
 }
 
-// Обработчик для кнопок фильтрации
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -30,7 +28,6 @@ filterButtons.forEach(button => {
     });
 });
 
-// Обработчик для переключателей
 toggleSwitches.forEach(toggle => {
     toggle.addEventListener('change', filterExtensions);
 });
